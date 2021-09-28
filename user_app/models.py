@@ -4,7 +4,7 @@ from taggit.managers import TaggableManager
 
 # Create your models here.
 
-class MyUser(AbstractUser):
+class Profile(AbstractUser):
     following = models.ManyToManyField(
         'self', related_name='follow', blank=True)
     avatar = models.ImageField(upload_to='static/i', null=True, blank=True)
